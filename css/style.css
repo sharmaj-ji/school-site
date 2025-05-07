@@ -63,6 +63,7 @@ body{
   .hero {
     background: url("../images/school.avif") no-repeat center center/cover;
     min-height: 80vh;
+    width: 100%;
     color: white;
     display: flex;
     align-items: center;
@@ -1192,4 +1193,106 @@ h1 {
   background-color: pink;
   padding-top: 50px;
   margin-top: 60px;
+}
+
+
+/* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+
+
+@media screen and (max-width: 768px) {
+  .flex, .flex1, .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+.ui {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 1px;
+  padding-top: 20px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+  .navbar {
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+
+  .navbar .logo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .topBar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Devices ≤ 480px (Phones) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+.ui {
+  display: grid;
+  grid-template-columns: auto auto ;
+  column-gap: 1px;
+  padding-top: 20px;
+
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+  .navbar .logo {
+    font-size: 18px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .topBar {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 12pt;
+  }
+
+  header, footer, .navbar, .topBar {
+    display: none !important;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  main {
+    padding: 0;
+  }
 }
